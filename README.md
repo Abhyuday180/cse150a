@@ -3,6 +3,12 @@
 ## Project Overview
 An utility-based AI trading agent using Bayesian networks to make buy/sell/hold decisions based on market indicators.
 
+## Abstract
+This project aims to develop an AI-driven trading agent that learns to make buy, sell, or hold decisions in the stock market to maximize both short-term and long-term returns, given a fixed principal amount. The agent leverages historical stock price and volume data to model market trends and respond to real-time fluctuations while balancing risk and reward. A key component of this system is a Bayesian network-based decision model, which captures dependencies between market variables such as stock price movements, trading volume trends, volatility, and macroeconomic indicators. By integrating probabilistic reasoning with reinforcement learning, the agent enhances its ability to adapt to evolving market conditions in an explainable and data-driven manner.
+The project will demonstrate core AI concepts, including data preprocessing, feature engineering, and policy learning within a utility-based framework. We will go about this by breaking down the procedure into milestones. In a nutshell, first, we will preprocess the data to build a historical dataset to estimate conditional probabilities and define key features such as moving averages, RSI, and volatility. Second, we will implement a simple Bayesian network that models all stock price dependencies and then train the model on historical data from our datasets to estimate the probability distributions. Then we will use the inference to update beliefs about future stock movements and ensure the model is ready for dynamic decisions based on live data. 
+The performance of the agent will be evaluated based on its ability to maximize long-term profit while minimizing drawdowns and maintaining portfolio stability. Through this approach, the project aims to build an AI trading agent that is not only profitable but also interpretable in its decision-making process.
+
+
 ## Milestone 2 Updates
 
 ### Data Exploration
@@ -11,7 +17,6 @@ An utility-based AI trading agent using Bayesian networks to make buy/sell/hold 
 - Discretized continuous variables into categorical states
 
 ### Bayesian Network
-![Network Structure](images/network.png)
 - Nodes: RSI_Cat, Vol_Cat, Vol_Chg → Price_Movement → Action
 - CPTs learned using Maximum Likelihood Estimation
 
@@ -30,6 +35,7 @@ Utility-based agent that maximizes risk-adjusted returns using probabilistic rea
 
 ## Installation
 ```bash
-git clone https://github.com/yourusername/ai-trading-agent.git
-cd ai-trading-agent
+git clone https://github.com/Abhyuday180/cse150a.git
+cd main
 pip install -r requirements.txt
+
