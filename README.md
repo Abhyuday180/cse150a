@@ -1,5 +1,9 @@
 # AI Trading Agent with Bayesian Networks
 
+# Members
+- Abhyuday Singh
+- Jayendra Mangal
+
 ## Project Overview
 An utility-based AI trading agent using Bayesian networks to make buy/sell/hold decisions based on market indicators.
 
