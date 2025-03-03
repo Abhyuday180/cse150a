@@ -1,6 +1,6 @@
 # AI Trading Agent with Bayesian Networks
 
-# Members
+## Members
 - Abhyuday Singh
 - Jayendra Mangal
 
