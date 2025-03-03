@@ -1,13 +1,11 @@
-# Core dependencies
-python==3.9.7
+# Core Requirements
 yfinance==0.2.18
 pgmpy==0.1.19
 pandas==1.5.3
 numpy==1.23.5
-scikit-learn==1.2.2
 matplotlib==3.7.1
-seaborn==0.12.2
+scikit-learn==1.2.2
 
-# Jupyter support
+# Development Tools
 jupyter==1.0.0
 ipykernel==6.22.0
