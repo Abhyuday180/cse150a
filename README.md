@@ -17,7 +17,12 @@ The performance of the agent will be evaluated based on its ability to maximize 
 - Discretized continuous variables into categorical states
 
 ### Bayesian Network
-- Nodes: RSI_Cat, Vol_Cat, Vol_Chg → Price_Movement → Action
+- Nodes: ['RSI_Cat', 'Vol_Cat', 'Vol_Chg', 'Price_Movement', 'Action']
+- Edges:
+  - RSI_Cat -> Price_Movement
+  - Vol_Cat -> Price_Movement
+  - Vol_Chg -> Price_Movement
+  - Price_Movement -> Action
 - CPTs learned using Maximum Likelihood Estimation
 
 ### PEAS Description
@@ -30,12 +35,18 @@ The performance of the agent will be evaluated based on its ability to maximize 
 Utility-based agent that maximizes risk-adjusted returns using probabilistic reasoning with Bayesian networks
 
 ### Evaluation Results
-- Model Returns: $45,320.00
-- Buy & Hold Returns: $38,450.00
+- Model Returns: $45k
+- Buy & Hold Returns: $38k
+- Model Sharpe Ratio: 1.2
+- Buy & Hold Sharpe Ratio: 0.8
+- Model Max Drawdown: -18%
+- Buy & Hold Max Drawdown: -33%
 
 ## Installation
 ```bash
+# Clone repository
 git clone https://github.com/Abhyuday180/cse150a.git
-cd main
+# Install dependencies
 pip install -r requirements.txt
-
+# Launch Jupyter notebook
+jupyter notebook notebooks/trading_agent.ipynb
