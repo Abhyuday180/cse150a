@@ -207,16 +207,19 @@ In practice, these inferred probabilities would feed into a **decision model** t
 ### **Numerical Results**
 
 - **Test Period**: We held out a validation set (approximately the last 20% of data).  
-- **Agent Returns**: **+12%** in the test period.  
+- **Agent Returns**: **+12%** in the test period. 
 - **Baseline (Random Decisions)**: ~**+3%**.  
-- **Model Accuracy on Price Movement Prediction**: ~**65%** on held-out data.  
-- **Maximum Drawdown**: ~**8%** (relatively stable compared to random strategy drawdowns).
+- **Model Accuracy on Price Movement Prediction**: ~**65%** on held-out data vs. 50% (Random Guessing)
+- **Maximum Drawdown**: ~**8%** vs. ~15% (Random Strategy)
+
+### Visualization 
+![Heatmap](./images/heatmap.jpeg "Heatmap illustrating how PriceMovement probabilities change with parent node states")
 
 ### **Interpretation**
 
 - The **Bayesian network** successfully captures **key dependencies** among market trend, RSI, and volatility.  
-- A **65%** accuracy in predicting next-day up/down movement indicates moderate predictive power – it’s more often correct than random guessing.  
-- Lower drawdowns suggest the agent’s decisions are more conservative and consistent than a random strategy.
+- A **65%** accuracy in predicting next-day up/down movement indicates moderate predictive power – it’s more often correct than random guessing. However, it leaves room for improvement—35% of predictions are incorrect, which could lead to suboptimal trades. 
+- Lower drawdowns suggest the agent’s decisions are more conservative and consistent than a random strategy. This aligns with the use of probabilistic reasoning to avoid aggressive bets during high uncertainty.
 
 ### **Proposed Improvements**
 
