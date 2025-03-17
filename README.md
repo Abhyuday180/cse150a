@@ -60,29 +60,12 @@ jupyter notebook notebooks/trading_agent.ipynb
 
 The project is divided into two main Bayesian network components:
 ### Market State Estimation Model
-
-Nodes (Variables):
-Market Trend: (Bullish, Bearish, Sideways) – Estimated using moving averages relative to the current price.
-Stock Price Movement: (Up, Down, Neutral) – Determined by day-to-day price changes.
-Trading Volume Trend: (Increasing, Decreasing, Stable) – Derived by quantile discretization of the volume.
-Volatility Indicator: (High, Medium, Low) – Derived from the rolling standard deviation of returns.
-Edges (Dependencies):
-Market Trend influences Stock Price Movement.
-Trading Volume Trend influences Volatility Indicator.
-Volatility Indicator affects future Stock Price Movements.
-
+Nodes: Market Trend (Bullish, Bearish, Sideways), Stock Price Movement (Up, Down, Neutral), Trading Volume Trend (Increasing, Decreasing, Stable), Volatility Indicator (High, Medium, Low). 
+Edges: Market Trend influences Stock Price Movement, Trading Volume Trend influences Volatility Indicator, Volatility Indicator affects future Stock Price Movements.
 
 ### Decision Model for the Trading Agent
-
-Nodes (Variables):
-Stock Price Forecast: The probabilistic prediction for future price changes.
-Portfolio State: Current cash balance, stock holdings.
-Risk Appetite: (Conservative, Moderate, Aggressive) – A parameter that can be set based on user preference.
-Buy/Sell/Hold Decision: The final decision output by the agent.
-
-Edges (Dependencies):
-Stock Price Forecast influences the Buy/Sell/Hold decision.
-Portfolio State and Risk Appetite jointly affect decision-making.
+Nodes: Stock Price Forecast, Portfolio State, Risk Appetite, Buy/Sell/Hold Decision.
+Edges: Stock Price Forecast influences the Buy/Sell/Hold decision, Portfolio State and Risk Appetite jointly affect decision-making.
 
 ## Training snippet
 ```bash
