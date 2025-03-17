@@ -1,3 +1,27 @@
+# AI Trading Agent with Bayesian Networks
+
+## Members
+- Abhyuday Singh
+- Jayendra Mangal
+
+## Project Overview
+An utility-based AI trading agent using Bayesian networks to make buy/sell/hold decisions based on market indicators.
+
+## Abstract
+This project aims to develop an AI-driven trading agent that learns to make buy, sell, or hold decisions in the stock market to maximize both short-term and long-term returns, given a fixed principal amount. The agent leverages historical stock price and volume data to model market trends and respond to real-time fluctuations while balancing risk and reward. A key component of this system is a Bayesian network-based decision model, which captures dependencies between market variables such as stock price movements, trading volume trends, volatility, and macroeconomic indicators. By integrating probabilistic reasoning with reinforcement learning, the agent enhances its ability to adapt to evolving market conditions in an explainable and data-driven manner.
+The project will demonstrate core AI concepts, including data preprocessing, feature engineering, and policy learning within a utility-based framework. We will go about this by breaking down the procedure into milestones. In a nutshell, first, we will preprocess the data to build a historical dataset to estimate conditional probabilities and define key features such as moving averages, RSI, and volatility. Second, we will implement a simple Bayesian network that models all stock price dependencies and then train the model on historical data from our datasets to estimate the probability distributions. Then we will use the inference to update beliefs about future stock movements and ensure the model is ready for dynamic decisions based on live data. 
+The performance of the agent will be evaluated based on its ability to maximize long-term profit while minimizing drawdowns and maintaining portfolio stability. Through this approach, the project aims to build an AI trading agent that is not only profitable but also interpretable in its decision-making process.
+
+# Milestone 3 / Final Submission
+
+We have made some improvements to our project outline and Bayesian network used. PEAS remaining the same, the project is now divided into two main Bayesian network components:
+### Market State Estimation Model
+Nodes: Market Trend (Bullish, Bearish, Sideways), Stock Price Movement (Up, Down, Neutral), Trading Volume Trend (Increasing, Decreasing, Stable), Volatility Indicator (High, Medium, Low). 
+Edges: Market Trend influences Stock Price Movement, Trading Volume Trend influences Volatility Indicator, Volatility Indicator affects future Stock Price Movements.
+
+### Decision Model for the Trading Agent
+Nodes: Stock Price Forecast, Portfolio State, Risk Appetite, Buy/Sell/Hold Decision.
+Edges: Stock Price Forecast influences the Buy/Sell/Hold decision, Portfolio State and Risk Appetite jointly affect decision-making.
 ## 1. PEAS/Agent Analysis
 
 ### **Task Background**
