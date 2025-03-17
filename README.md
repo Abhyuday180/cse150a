@@ -61,7 +61,7 @@ A **utility-based** agent that uses Bayesian networks to probabilistically estim
 
 ### **Dataset Exploration**
 
-We collected **3,407 daily observations** of Apple (AAPL) stock from **2010 to 2023** for milestone 2. The raw dataset includes daily information such as **Open, High, Low, Close, Volume**.
+We collected **3,407 daily observations** of Apple (AAPL) stock from **2010 to 2023**. The raw dataset includes daily information such as **Open, High, Low, Close, Volume**.
 
 1. **Close Price**  
    - Role: Primary variable for calculating returns and signals (e.g., price movements).  
@@ -111,7 +111,13 @@ For a **discrete Bayesian Network**, we must bucket continuous variables into ca
 
 ### **Parameter Calculation (CPTs)**
 
-We used **Maximum Likelihood Estimation (MLE)** for each conditional probability in the network. We rely on the **pgmpy** library’s built-in `MaximumLikelihoodEstimator` to automate these counts and compute the CPTs.
+We used **Maximum Likelihood Estimation (MLE)** for each conditional probability in the network. For example, if `X` and `Y` are discrete nodes, then:
+
+\[
+P(Y = y \mid X = x) \approx \frac{\text{Count}(Y = y, X = x)}{\text{Count}(X = x)}
+\]
+
+where \(\text{Count}(Y=y, X=x)\) is the number of occurrences in the data for those values. We rely on the **pgmpy** library’s built-in `MaximumLikelihoodEstimator` to automate these counts and compute the CPTs.
 
 ### **Library Usage**
 
@@ -123,7 +129,18 @@ We used **Maximum Likelihood Estimation (MLE)** for each conditional probability
 
 - **numpy** ([Documentation](https://numpy.org/)):  
   For numerical computations (percent changes, array operations).
+  
+- **matplotlib** – [Documentation](https://matplotlib.org/)
+  Used to create plots and visualizations of the stock price, technical indicators, and trading performance results.
 
+- **yfinance** – for sourcing stock data (not shown in code snippet but used in data collection stage)
+  Used to retrieve historical stock price and volume data from Yahoo Finance (not shown explicitly in the code snippet but used during data collection).
+
+- **scikit-learn** [Documentation](https://scikit-learn.org/stable/)
+  Utilized for additional machine learning utilities like data splitting (e.g., train/test splits), performance metrics, and model selection tasks.
+
+- **seaborn** [Documentation](https://seaborn.pydata.org/)
+  Used for advanced statistical plots and heatmaps that can provide deeper insight into feature correlations and results.
 ---
 
 ## 3. Train Your Model 
@@ -231,13 +248,17 @@ In practice, these inferred probabilities would feed into a **decision model** t
 
 ---
 
-## References
+## Citations/References
 
 - **pgmpy** – [Documentation](http://pgmpy.org/)  
 - **pandas** – [Documentation](https://pandas.pydata.org/)  
 - **numpy** – [Documentation](https://numpy.org/)  
 - **matplotlib** – [Documentation](https://matplotlib.org/)  
 - **yfinance** – for sourcing stock data (not shown in code snippet but used in data collection stage)
+- **scikit-learn** [Documentation](https://scikit-learn.org/stable/)
+- **seaborn** [Documentation](https://seaborn.pydata.org/)
+- **ChatGPT** - for making README.md more organized.
+    prompt: "refine the descriptions according to the assignment criteria"
 
 ---
 
