@@ -130,10 +130,10 @@ After training, the agent was evaluated on a separate validation set. The agent 
 The agent’s performance indicates that the Bayesian network is able to capture key dependencies in market behavior. However, the moderate prediction accuracy suggests that while the model offers interpretability, there is room for improvement in predictive power.
 
 ## Improvements 
-- 1. Enhanced Feature Engineering: Integrate additional technical indicators and external economic cues.
-- 2. Model Complexity: Experiment with hybrid models incorporating reinforcement learning for dynamic adaptation.
-- 3. Data Enrichment: Use higher frequency data or alternative market data (e.g., sentiment analysis) to refine predictions.
-- 4. Parameter Estimation: Explore Bayesian parameter estimation (using priors) to improve robustness, especially when data is sparse.
+ 1. Enhanced Feature Engineering: Integrate additional technical indicators and external economic cues.
+ 2. Model Complexity: Experiment with hybrid models incorporating reinforcement learning for dynamic adaptation.
+ 3. Data Enrichment: Use higher frequency data or alternative market data (e.g., sentiment analysis) to refine predictions.
+ 4. Parameter Estimation: Explore Bayesian parameter estimation (using priors) to improve robustness, especially when data is sparse.
 
 ## References 
 - pgmpy documentation for creating and training Bayesian network models: http://pgmpy.org/
@@ -141,3 +141,5 @@ The agent’s performance indicates that the Bayesian network is able to capture
 - numpy documentation for creating and training Bayesian network models: https://numpy.org/
 - matplotlib documentation for visualization and plotting results: https://matplotlib.org/
 - seaborn documentation for visualization and plotting results: https://seaborn.pydata.org/
+- sklearn.model_selection for training the data while splitting: https://scikit-learn.org/stable/
+- yfinance as data source 
