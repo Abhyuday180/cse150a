@@ -213,8 +213,7 @@ In practice, these inferred probabilities would feed into a **decision model** t
 - **Maximum Drawdown**: ~**8%** vs. ~15% (Random Strategy)
 
 ### Visualization 
-![Heatmap](./images/heatmap.jpeg "Heatmap illustrating how PriceMovement probabilities change with parent node states")
-
+![heatmap](https://github.com/user-attachments/assets/e0cc96a1-50a0-4436-85cc-5fde15a205c3 "Heatmap illustrating how PriceMovement probabilities change with parent node states")
 ### **Interpretation**
 
 - The **Bayesian network** successfully captures **key dependencies** among market trend, RSI, and volatility.  
