@@ -61,7 +61,7 @@ A **utility-based** agent that uses Bayesian networks to probabilistically estim
 
 ### **Dataset Exploration**
 
-We collected **3,407 daily observations** of Apple (AAPL) stock from **2010 to 2023**. The raw dataset includes daily information such as **Open, High, Low, Close, Volume**.
+We collected **3,407 daily observations** of Apple (AAPL) stock from **2010 to 2023** for milestone 2. The raw dataset includes daily information such as **Open, High, Low, Close, Volume**.
 
 1. **Close Price**  
    - Role: Primary variable for calculating returns and signals (e.g., price movements).  
@@ -111,13 +111,7 @@ For a **discrete Bayesian Network**, we must bucket continuous variables into ca
 
 ### **Parameter Calculation (CPTs)**
 
-We used **Maximum Likelihood Estimation (MLE)** for each conditional probability in the network. For example, if `X` and `Y` are discrete nodes, then:
-
-\[
-P(Y = y \mid X = x) \approx \frac{\text{Count}(Y = y, X = x)}{\text{Count}(X = x)}
-\]
-
-where \(\text{Count}(Y=y, X=x)\) is the number of occurrences in the data for those values. We rely on the **pgmpy** library’s built-in `MaximumLikelihoodEstimator` to automate these counts and compute the CPTs.
+We used **Maximum Likelihood Estimation (MLE)** for each conditional probability in the network. We rely on the **pgmpy** library’s built-in `MaximumLikelihoodEstimator` to automate these counts and compute the CPTs.
 
 ### **Library Usage**
 
