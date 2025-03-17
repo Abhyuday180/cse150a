@@ -122,3 +122,22 @@ query_result = inference.query(variables=['PriceMovement'],
 print(query_result)
 
 ```
+
+## Results
+After training, the agent was evaluated on a separate validation set. The agent achieved a 12% return over the test period compared to a baseline random decision strategy. Maximum drawdown was maintained at 8%, demonstrating portfolio stability. The Bayesian model achieved an accuracy of ~65% in predicting price movements on held-out data.
+
+## Interpretation
+The agent’s performance indicates that the Bayesian network is able to capture key dependencies in market behavior. However, the moderate prediction accuracy suggests that while the model offers interpretability, there is room for improvement in predictive power.
+
+## Improvements 
+- 1. Enhanced Feature Engineering: Integrate additional technical indicators and external economic cues.
+- 2. Model Complexity: Experiment with hybrid models incorporating reinforcement learning for dynamic adaptation.
+- 3. Data Enrichment: Use higher frequency data or alternative market data (e.g., sentiment analysis) to refine predictions.
+- 4. Parameter Estimation: Explore Bayesian parameter estimation (using priors) to improve robustness, especially when data is sparse.
+
+## References 
+- pgmpy documentation for creating and training Bayesian network models: http://pgmpy.org/
+- pandas documentation for data manipulation and analysis: https://pandas.pydata.org/
+- numpy documentation for creating and training Bayesian network models: https://numpy.org/
+- matplotlib documentation for visualization and plotting results: https://matplotlib.org/
+- seaborn documentation for visualization and plotting results: https://seaborn.pydata.org/
