@@ -214,6 +214,21 @@ In practice, these inferred probabilities would feed into a **decision model** t
 
 ### Visualization 
 ![heatmap](https://github.com/user-attachments/assets/e0cc96a1-50a0-4436-85cc-5fde15a205c3 "Heatmap illustrating how PriceMovement probabilities change with parent node states")
+```bash
+import seaborn as sns
+
+cpt = model.get_cpds('PriceMovement') 
+cpt_df = pd.DataFrame(cpt.values, columns=cpt.state_names['PriceMovement'], 
+                      index=pd.MultiIndex.from_tuples(cpt.state_names['MarketTrend']))
+
+plt.figure(figsize=(10, 6))
+sns.heatmap(cpt_df, annot=True, fmt=".2f", cmap="YlGnBu")
+plt.title('CPT Heatmap: PriceMovement | MarketTrend & RSI_Level')
+plt.xlabel('PriceMovement')
+plt.ylabel('MarketTrend, RSI_Level')
+plt.show()
+```
+
 ### **Interpretation**
 
 - The **Bayesian network** successfully captures **key dependencies** among market trend, RSI, and volatility.  
