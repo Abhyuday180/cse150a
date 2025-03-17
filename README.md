@@ -58,7 +58,7 @@ jupyter notebook notebooks/trading_agent.ipynb
 
 # Milestone 3 / Final Submission
 
-The project is divided into two main Bayesian network components:
+We have made some improvements to our project outline and Bayesian network used. PEAS remaining the same, the project is now divided into two main Bayesian network components:
 ### Market State Estimation Model
 Nodes: Market Trend (Bullish, Bearish, Sideways), Stock Price Movement (Up, Down, Neutral), Trading Volume Trend (Increasing, Decreasing, Stable), Volatility Indicator (High, Medium, Low). 
 Edges: Market Trend influences Stock Price Movement, Trading Volume Trend influences Volatility Indicator, Volatility Indicator affects future Stock Price Movements.
