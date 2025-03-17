@@ -56,22 +56,21 @@ pip install -r requirements.txt
 jupyter notebook notebooks/trading_agent.ipynb
 ```
 
-### Milestone 3 / Final Submission
+# Milestone 3 / Final Submission
 The project is divided into two main Bayesian network components:
-1. Market State Estimation Model
+Market State Estimation Model
 Nodes (Variables):
 Market Trend: (Bullish, Bearish, Sideways) – Estimated using moving averages relative to the current price.
 Stock Price Movement: (Up, Down, Neutral) – Determined by day-to-day price changes.
 Trading Volume Trend: (Increasing, Decreasing, Stable) – Derived by quantile discretization of the volume.
 Volatility Indicator: (High, Medium, Low) – Derived from the rolling standard deviation of returns.
-
 Edges (Dependencies):
 Market Trend influences Stock Price Movement.
 Trading Volume Trend influences Volatility Indicator.
 Volatility Indicator affects future Stock Price Movements.
 
 
-2. Decision Model for the Trading Agent
+Decision Model for the Trading Agent
 Nodes (Variables):
 Stock Price Forecast: The probabilistic prediction for future price changes.
 Portfolio State: Current cash balance, stock holdings.
